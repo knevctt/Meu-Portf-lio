@@ -5,10 +5,10 @@
     align-items: center;
     justify-content: space-between;
     color: rgba(212, 187, 110, 0.884);
-    width: 98.4vw;
+    width: auto;
     height: 6vw;
     background-color: #262322;
-    
+    padding-top: 15px;
 }
 
 #meuNome{
@@ -24,24 +24,34 @@
 }
 
 .firstPanel{
-    width: 98.4vw;
+    width: auto;
     height: 100vw;
     background-color: #F2E5D7;
-}
-
-.secondPanel{
-    width: 98.4vw;
-    height: 100vw;
-    background-color: #C97D60;
-}
-
-.container{
     display: flex;
-    flex-direction:column;
+    flex-direction:row;
     justify-content: flex-center;
-    width: auto;
-    height: auto;
     align-items: flex-start;
     flex-wrap: wrap; /*pra nao colocar tudo na mesma linha e tentar adaptar o espaço quando acabar*/
     align-content: center;
+}
+
+.secondPanel{
+    width: auto;
+    height: 100vw;
+    background-color: #63372C;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-center;
+    align-items: flex-start;
+    flex-wrap: wrap; /*pra nao colocar tudo na mesma linha e tentar adaptar o espaço quando acabar*/
+    align-content: center;
+}
+
+body{
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 100vw;
 }
