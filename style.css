@@ -4,8 +4,44 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: rgba(212, 187, 110, 0.884);
+    width: 98.4vw;
+    height: 6vw;
+    background-color: #262322;
+    
 }
 
-*{
-    border-radius: 1rem;
+#meuNome{
+    font-size: 175%;
+    margin-left: 1%;
+    margin-top: 1%;
+    align-items: center;
+    
+}
+
+#botaoHeader{
+    margin-right: 1.5%;
+}
+
+.firstPanel{
+    width: 98.4vw;
+    height: 100vw;
+    background-color: #F2E5D7;
+}
+
+.secondPanel{
+    width: 98.4vw;
+    height: 100vw;
+    background-color: #C97D60;
+}
+
+.container{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-center;
+    width: auto;
+    height: auto;
+    align-items: flex-start;
+    flex-wrap: wrap; /*pra nao colocar tudo na mesma linha e tentar adaptar o espaço quando acabar*/
+    align-content: center;
 }
