@@ -1,30 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
-.firstPanel{
-    background: linear-gradient(180deg, #0B132B,#5BC0BE);
+#apresentacao {
+    color: #37FF8B;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 2em; /* Ajuste para corresponder ao tamanho do texto do botão */
+    font-family: "Arial";
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(55, 255, 139, 0.5), /* Glow suave */
+                 0 0 20px rgba(55, 255, 139, 0.5), /* Glow médio */
+                 0 0 30px rgba(55, 255, 139, 0.5); /* Glow intenso */
+    font-weight: 700;
+}
+
+
+.firstPanel {
+    background: linear-gradient(180deg, #0B132B, #5BC0BE);
     width: auto;
     min-height: 100vh;
     display: flex;
-    flex-direction:row;
-    justify-content: flex-center;
-    align-items: flex-start;
-    flex-wrap: wrap; /*pra nao colocar tudo na mesma linha e tentar adaptar o espaço quando acabar*/
-    align-content: center;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinha o conteúdo no topo */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 20px; /* Adiciona algum espaço ao redor do conteúdo */
 }
 
-.secondPanel{
-    background: linear-gradient(#5BC0BE ,#0B132B);
+.secondPanel {
+    background: linear-gradient(#5BC0BE, #0B132B);
     width: auto;
     height: 100vh;
     display: flex;
-    flex-direction:row;
-    justify-content: flex-center;
+    flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; /*pra nao colocar tudo na mesma linha e tentar adaptar o espaço quando acabar*/
+    flex-wrap: wrap;
     align-content: center;
 }
 
-body{
+header {
+    position: fixed;
+}
+
+body {
     width: auto;
     height: auto;
     margin: 0;
@@ -33,7 +50,7 @@ body{
     height: 100vw;
 }
 
-/* === removing default button style ===*/
+/* === removing default button style === */
 .button {
     margin: 0;
     height: auto;
@@ -41,12 +58,12 @@ body{
     padding: 0;
     border: none;
     cursor: pointer;
-  }
-  
-  /* button styling */
-  .button {
+}
+
+/* button styling */
+.button {
     --border-right: 6px;
-    --text-stroke-color: rgba(255,255,255,0.6);
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
     --animation-color: #37FF8B;
     --fs-size: 2em;
     letter-spacing: 3px;
@@ -57,9 +74,10 @@ body{
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px var(--text-stroke-color);
-  }
-  /* this is the text, when you hover on button */
-  .hover-text {
+}
+
+/* this is the text, when you hover on button */
+.hover-text {
     position: absolute;
     box-sizing: border-box;
     content: attr(data-text);
@@ -70,9 +88,65 @@ body{
     overflow: hidden;
     transition: 0.5s;
     -webkit-text-stroke: 1px var(--animation-color);
-  }
-  /* hover */
-  .button:hover .hover-text {
+}
+
+/* hover */
+.button:hover .hover-text {
     width: 100%;
-    filter: drop-shadow(0 0 23px var(--animation-color))
-  }
+    filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+.descer {
+    font-size: 16px;
+    padding: 1em 3.3em;
+    cursor: pointer;
+    transform: perspective(200px) rotateX(15deg);
+    color: white;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(
+        0deg,
+        rgba(63, 94, 251, 1) 0%,
+        rgba(70, 135, 252, 1) 100%
+    );
+    box-shadow: rgba(63, 94, 251, 0.2) 0px 40px 29px 0px;
+    will-change: transform;
+    transition: all 0.3s;
+    border-bottom: 2px solid rgba(70, 135, 252, 1);
+}
+
+.descer:hover {
+    transform: perspective(180px) rotateX(30deg) translateY(2px);
+}
+
+.descer:active {
+    transform: perspective(170px) rotateX(36deg) translateY(5px);
+}
+
+/* Controles específicos para os botões por ID */
+#button1 {
+    align-self: flex-start; /* Alinha o primeiro botão ao início */
+}
+
+#button2 {
+    align-self: center; /* Centraliza horizontalmente */
+    margin-top: auto; /* Move o botão para o fim da div */
+    margin-bottom: 20px; /* Espaço opcional na parte inferior */
+}
+
+.left-right-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px; /* Espaço opcional para afastar os elementos das bordas */
+}
+
+.button-p-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o botão e o parágrafo, ajuste conforme necessário */
+}
+
+  
